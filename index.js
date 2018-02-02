@@ -27,11 +27,12 @@ function viewCart() {
     var itemsAndPrices = [];
     for (var i = 0; i < cart.length; i++) {
       itemsAndPrices.push(`${Object.keys(cart[i])} at $${cart[i][Object.keys(cart[i])]}`);
+      var str1='and '
+      itemsAndPrices[length-1] = str1.concat(itemsAndPrices[length-1]);
+      itemsAndPrices = itemsAndPrices.join(', ');
+      console.log(`In your cart, you have ${itemsAndPrices}.`)
     }
-    var str1='and '
-    itemsAndPrices[length-1] = str1.concat(itemsAndPrices[length-1]);
-    itemsAndPrices = itemsAndPrices.join(', ');
-    console.log(`In your cart, you have ${itemsAndPrices}.`)
+
   }
 }
 
