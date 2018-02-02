@@ -29,7 +29,7 @@ function viewCart() {
       itemsAndPrices.push(`${Object.keys(cart[i])} at $${cart[i][Object.keys(cart[i])]}`);
     }
     itemsAndPrices[length-1] = 'and '.concat(itemsAndPrices[length-1]);
-    itemsAndPrices.join(', ');
+    itemsAndPrices = itemsAndPrices.join(', ');
     console.log(`In your cart, you have ${itemsAndPrices}.`)
   }
 }
