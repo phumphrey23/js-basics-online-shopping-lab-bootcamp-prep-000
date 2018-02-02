@@ -26,13 +26,11 @@ function viewCart() {
   } else if (cart.length >= 3){
     var itemsAndPrices = [];
     for (var i = 0; i < cart.length; i++) {
-      itemsAndPrices.push(`${Object.keys(cart[i])} at $${cart[i][Object.keys(cart[i])]}`);
-      var str1='and '
-      itemsAndPrices[length-1] = str1.concat(itemsAndPrices[length-1]);
-      itemsAndPrices = itemsAndPrices.join(', ');
-      console.log(`In your cart, you have ${itemsAndPrices}.`)
+      itemsAndPrices.push(`${Object.keys(cart[i])[0]} at $${cart[i][Object.keys(cart[i])[0]]}`);
     }
-
+    itemsAndPrices[length-1] = 'and '.concat(itemsAndPrices[length-1]);
+    itemsAndPrices = itemsAndPrices.join(', ');
+    console.log(`In your cart, you have ${itemsAndPrices}.`)
   }
 }
 
