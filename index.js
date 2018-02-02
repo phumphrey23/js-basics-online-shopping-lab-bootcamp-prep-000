@@ -26,7 +26,10 @@ function viewCart() {
   } else if (cart.length >= 3){
     var itemsAndPrices = [];
     for (var i = 0; i < cart.length; i++) {
-      itemsAndPrices.push(`${Object.keys(cart[i])[0]} at $${cart[i][Object.keys(cart[i])[0]]}`);
+      var itemAndPrice = cart[i]
+      var item = Object.keys(itemAndPrice)[0]
+      var price = itemAndPrice[item]
+      itemsAndPrices.push(`${item} at \$${price}`);
     }
     itemsAndPrices[length-1] = 'and '.concat(itemsAndPrices[length-1]);
     itemsAndPrices = itemsAndPrices.join(', ');
