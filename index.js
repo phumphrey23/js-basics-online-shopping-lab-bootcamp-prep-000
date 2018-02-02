@@ -27,9 +27,9 @@ function viewCart() {
     var itemsAndPrices = [];
     for (var i = 0; i < cart.length; i++) {
       itemsAndPrices.push(`${Object.keys(cart[i])} at $${cart[i][Object.keys(cart[i])]}`);
-      itemsAndPrices[length-1] = 'and '+ itemsAndPrices[length-1];
-      itemsAndPrices.join(', ');
     }
+    itemsAndPrices[length-1] = 'and '.concat(itemsAndPrices[length-1]);
+    itemsAndPrices.join(', ');
     console.log(`In your cart, you have ${itemsAndPrices}.`)
   }
 }
